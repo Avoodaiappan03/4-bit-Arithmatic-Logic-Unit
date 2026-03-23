@@ -1,49 +1,65 @@
 # 4-bit Arithmetic Logic Unit (ALU) Implementation
 
 ## 📌 Project Overview
-This project features a **Verilog HDL** implementation of a 4-bit Arithmetic Logic Unit (ALU). Designed for RTL simulation and synthesis, this module serves as a core component for digital systems, performing various mathematical and bitwise operations.
+This repository contains a **Verilog HDL** implementation of a 4-bit Arithmetic Logic Unit (ALU). The ALU is a digital circuit that performs arithmetic and logical operations and serves as a fundamental building block of a processor's Central Processing Unit (CPU).
 
-## 🛠 Features
-- **Data Width:** 4-bit inputs and outputs.
-- **Control:** 3-bit Opcode selection.
-- **Flags:** Carry-Out flag included for arithmetic monitoring.
-- **Design Style:** Behavioral modeling for clarity and efficiency.
+This project demonstrates RTL design, behavioral modeling, and functional verification using a directed testbench.
+
+---
+
+## 🛠 Features & Specifications
+- **Data Width:** 4-bit inputs ($A$, $B$) and 4-bit output ($ALU\_Out$).
+- **Control Logic:** 3-bit Opcode to select between 8 operations.
+- **Flag Logic:** Includes a **Carry-Out** flag to indicate arithmetic overflow.
+- **Modeling:** Behavioral Verilog using `always` blocks and `case` statements.
 
 ---
 
 ## 📊 Operations Table
-The ALU executes the following operations based on the `opcode` input:
+The following operations are supported by this ALU:
 
-| Opcode | Operation | Type |
-| :--- | :--- | :--- |
-| `000` | Addition (`A + B`) | Arithmetic |
-| `001` | Subtraction (`A - B`) | Arithmetic |
-| `010` | Logical AND | Bitwise |
-| `011` | Logical OR | Bitwise |
-| `100` | Logical XOR | Bitwise |
-| `101` | Logical NOT (`~A`) | Bitwise |
-| `110` | Left Shift (`A << 1`) | Shift |
-| `111` | Right Shift (`A >> 1`) | Shift |
+| Opcode | Operation | Type | Function |
+| :--- | :--- | :--- | :--- |
+| `000` | **Addition** | Arithmetic | $A + B$ |
+| `001` | **Subtraction** | Arithmetic | $A - B$ |
+| `010` | **Logical AND** | Bitwise | $A \text{ & } B$ |
+| `011` | **Logical OR** | Bitwise | $A \text{ \| } B$ |
+| `100` | **Logical XOR** | Bitwise | $A \oplus B$ |
+| `101` | **Logical NOT** | Bitwise | $\sim A$ |
+| `110` | **Left Shift** | Shift | $A \ll 1$ |
+| `111` | **Right Shift** | Shift | $A \gg 1$ |
 
 ---
 
-## 📂 Repository Contents
-* `alu.v`: RTL source code for the ALU module.
-* `alu_tb.v`: Comprehensive testbench for functional verification.
-* `waveform.png`: (Optional) Simulation timing diagram.
+## 📂 Repository Structure
+* **`alu.v`**: The core RTL design source code.
+* **`alu_tb.v`**: The testbench used for functional verification.
+* **`waveform_alu_result.png`**: Simulation timing diagram showing the design's behavior.
 
-## 🧪 Simulation Instructions
-1. Upload `alu.v` and `alu_tb.v` to a simulator like **EDA Playground**.
-2. Select the **Icarus Verilog** tool.
-3. Run the simulation to view the output in the console and timing waveforms.
+---
+
+## 🧪 Simulation & Verification
+The design was verified by applying various test vectors in a directed testbench environment.
+
+### Tools Used:
+- **Simulator:** Icarus Verilog / EDA Playground
+- **Waveform Viewer:** GTKWave
+
+### Simulation Results:
+Below is the timing diagram illustrating the transition of signals across different opcodes.
+
+<p align="center">
+  <img src="./waveform_alu_result.png" alt="ALU Simulation Result" width="850">
+</p>
 
 ---
 
 ## 🚀 Future Roadmap
-- Parameterize the design to support 8-bit or 16-bit widths.
-- Implement a Zero Flag and Overflow Flag for enhanced status reporting.
-- Transition to a SystemVerilog-based verification environment.
+- [ ] Implement a **Zero Flag** to detect null results.
+- [ ] Parameterize the design to support **8-bit and 16-bit** operations.
+- [ ] Develop a **SystemVerilog** testbench with constrained random stimulus.
 
 ---
-**Author:** Avoodaiappan  
-*Electronics and Communication Engineering Student*
+
+## 👤 Author
+**Avoodaiappan** *Electronics and Communication Engineering Student*
