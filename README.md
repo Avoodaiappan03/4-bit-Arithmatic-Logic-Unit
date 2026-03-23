@@ -22,7 +22,7 @@ The following operations are supported by this ALU:
 | :--- | :--- | :--- | :--- |
 | `000` | **Addition** | Arithmetic | $A + B$ |
 | `001` | **Subtraction** | Arithmetic | $A - B$ |
-| `010` | **Logical AND** | Bitwise | $A \text{ & } B$ |
+| 010 | **Logical AND** | Bitwise | A & B |
 | `011` | **Logical OR** | Bitwise | $A \text{ \| } B$ |
 | `100` | **Logical XOR** | Bitwise | $A \oplus B$ |
 | `101` | **Logical NOT** | Bitwise | $\sim A$ |
