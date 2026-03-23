@@ -1,13 +1,13 @@
 # 4-bit Arithmetic Logic Unit (ALU) Implementation
 
-## 📌 Project Overview
+# Project Overview
 This repository contains a **Verilog HDL** implementation of a 4-bit Arithmetic Logic Unit (ALU). The ALU is a digital circuit that performs arithmetic and logical operations and serves as a fundamental building block of a processor's Central Processing Unit (CPU).
 
 This project demonstrates RTL design, behavioral modeling, and functional verification using a directed testbench.
 
 ---
 
-## 🛠 Features & Specifications
+# Features & Specifications
 - **Data Width:** 4-bit inputs ($A$, $B$) and 4-bit output ($ALU\_Out$).
 - **Control Logic:** 3-bit Opcode to select between 8 operations.
 - **Flag Logic:** Includes a **Carry-Out** flag to indicate arithmetic overflow.
@@ -15,7 +15,7 @@ This project demonstrates RTL design, behavioral modeling, and functional verifi
 
 ---
 
-## 📊 Operations Table
+# Operations Table
 The following operations are supported by this ALU:
 
 | Opcode | Operation | Type | Function |
@@ -31,21 +31,21 @@ The following operations are supported by this ALU:
 
 ---
 
-## 📂 Repository Structure
+# Repository Structure
 * **`alu.v`**: The core RTL design source code.
 * **`alu_tb.v`**: The testbench used for functional verification.
 * **`waveform_alu_result.png`**: Simulation timing diagram showing the design's behavior.
 
 ---
 
-## 🧪 Simulation & Verification
+# Simulation & Verification
 The design was verified by applying various test vectors in a directed testbench environment.
 
-### Tools Used:
+# Tools Used:
 - **Simulator:** Icarus Verilog / EDA Playground
 - **Waveform Viewer:** GTKWave
 
-### Simulation Results:
+# Simulation Results:
 Below is the timing diagram illustrating the transition of signals across different opcodes.
 
 <p align="center">
@@ -54,12 +54,12 @@ Below is the timing diagram illustrating the transition of signals across differ
 
 ---
 
-## 🚀 Future Roadmap
+# Future Roadmap
 - [ ] Implement a **Zero Flag** to detect null results.
 - [ ] Parameterize the design to support **8-bit and 16-bit** operations.
 - [ ] Develop a **SystemVerilog** testbench with constrained random stimulus.
 
 ---
 
-## 👤 Author
+# Author
 **Avoodaiappan** *Electronics and Communication Engineering Student*
