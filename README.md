@@ -16,7 +16,7 @@ This project demonstrates **RTL design** using behavioral modeling and serves as
 ---
 
 ## Operations Table
-The following table reflects the actual logic implemented in the `module_alu.v` source code:
+The following table reflects the actual logic implemented in the `module_alu.v` design code:
 
 | Opcode | Operation | Type | Function |
 | :--- | :--- | :--- | :--- |
@@ -24,7 +24,7 @@ The following table reflects the actual logic implemented in the `module_alu.v` 
 | `001` | **Addition** | Arithmetic | `alu_out = A + B` |
 | `010` | **Subtraction** | Arithmetic | `alu_out = A - B` |
 | `011` | **Logical AND** | Bitwise | `alu_out = A & B` |
-| `100` | **Logical OR** | Bitwise | `alu_out = A | B` |
+| `100` | **Logical OR** | Bitwise | `alu_out = A \| B` |
 | `101` | **Logical NOT (A)** | Bitwise | `alu_out = ~A` |
 | `110` | **Logical NOT (B)** | Bitwise | `alu_out = ~B` |
 | `111` | **Null / Zero** | Reset | `alu_out = 0` |
