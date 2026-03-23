@@ -55,9 +55,9 @@ Below is the timing diagram illustrating the transition of signals across differ
 ---
 
 # Future Roadmap
-- [ ] Implement a **Zero Flag** to detect null results.
-- [ ] Parameterize the design to support **8-bit and 16-bit** operations.
-- [ ] Develop a **SystemVerilog** testbench with constrained random stimulus.
+-  Implement a **Zero Flag** to detect null results.
+-  Parameterize the design to support **8-bit and 16-bit** operations.
+-  Develop a **SystemVerilog** testbench with constrained random stimulus.
 
 ---
 
